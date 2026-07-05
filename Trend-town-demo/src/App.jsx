@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
@@ -17,7 +17,7 @@ import { Contact } from './pages/Contact';
 function App() {
   return (
     <CartProvider>
-      <HashRouter>
+      <BrowserRouter>
         <div className="flex flex-col min-h-screen">
           <Navbar />
           <main className="flex-grow">
@@ -34,7 +34,7 @@ function App() {
           <Footer />
           <Toast />
         </div>
-      </HashRouter>
+      </BrowserRouter>
     </CartProvider>
   );
 }
